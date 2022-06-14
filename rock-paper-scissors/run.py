@@ -5,22 +5,29 @@ def run():
     """ Rock, Paper, Scissors. """
     run = RockPaperScissors()
 
-    # Requesting user input.
-    user_input = run.user_input()
-    # Requesting computer input.
-    computer_input = run.computer_input()
+    while True:
+        # Requesting user input.
+        user_input = run.user_input()
 
-    # Player round win condition.
-    if run.round_win_condition(user_input, computer_input):
-        print("\nRound Won!")
+        # Requesting computer input.
+        computer_input = run.computer_input()
 
-    # Computer round win condition.
-    if run.round_win_condition(computer_input, user_input):
-        print("\nRound Lost!")
+        # Player round win condition.
+        if run.round_win_condition(user_input, computer_input):
+            print("\nRound Won!")
 
-    # Round tie condition.
-    if user_input == computer_input:
-        print("\nTie!")
+        # Computer round win condition.
+        if run.round_win_condition(computer_input, user_input):
+            print("\nRound Lost!")
+
+        # Round tie condition.
+        if user_input == computer_input:
+            print("\nTie!")
+
+        # Requesting user input.
+        run.restart()
+
+        continue
 
 
 if __name__ == '__main__':
