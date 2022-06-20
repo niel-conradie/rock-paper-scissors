@@ -46,8 +46,8 @@ class RockPaperScissors:
     def display_scoreboard(self, user_input, computer_input):
         """ Display the choice and score. """
         print(f"User: {user_input.title()}"
-              f"Computer: {computer_input.title()}"
-              f"{self.player_score} | {self.computer_score}")
+              f"\nComputer: {computer_input.title()}"
+              f"\n{self.player_score} | {self.computer_score}")
 
     @staticmethod
     def restart():
