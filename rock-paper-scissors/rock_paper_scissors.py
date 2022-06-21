@@ -35,6 +35,15 @@ class RockPaperScissors:
            (player_1 == 'paper' and player_2 == 'rock'):
             return True
 
+    def game_win_condition(self):
+        """ Return True if player or computer score equals 3. """
+        if self.player_score == 3:
+            print("\nWinner!")
+            return True
+        if self.computer_score == 3:
+            print("\nYou Lost!")
+            return True
+
     def add_player_score(self):
         """ Add point to the player score. """
         self.player_score += 1
@@ -48,6 +57,11 @@ class RockPaperScissors:
         print(f"User: {user_input.title()}"
               f"\nComputer: {computer_input.title()}"
               f"\n{self.player_score} | {self.computer_score}")
+
+    def reset_score(self):
+        """ Reset player and computer scores to zero. """
+        self.player_score = 0
+        self.computer_score = 0
 
     @staticmethod
     def restart():
