@@ -2,7 +2,7 @@ from rock_paper_scissors import RockPaperScissors
 
 
 def run():
-    """ Rock, Paper, Scissors. """
+    """Rock, Paper, Scissors."""
     run = RockPaperScissors()
 
     while True:
@@ -50,5 +50,5 @@ def run():
         continue
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     run()
