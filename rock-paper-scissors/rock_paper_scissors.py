@@ -56,11 +56,9 @@ class RockPaperScissors:
 
     def display_scoreboard(self, user_input, computer_input):
         """Display the choice and score."""
-        print(
-            f"User: {user_input.title()}"
-            f"\nComputer: {computer_input.title()}"
-            f"\n{self.player_score} | {self.computer_score}"
-        )
+        print(f"User: {user_input.title()}")
+        print(f"\nComputer: {computer_input.title()}")
+        print(f"\n{self.player_score} | {self.computer_score}")
 
     def reset_score(self):
         """Reset player and computer scores to zero."""
