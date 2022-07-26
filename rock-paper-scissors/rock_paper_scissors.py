@@ -65,6 +65,52 @@ class RockPaperScissors:
         self.player_score = 0
         self.computer_score = 0
 
+    def start_game(self):
+        """Starting the game."""
+        while True:
+            print("\nFirst to '3' wins!")
+
+            while True:
+                # Requesting user input.
+                user_input = self.user_input()
+                # Requesting computer input.
+                computer_input = self.computer_input()
+
+                # Player round win condition.
+                if self.round_win_condition(user_input, computer_input):
+                    print("\nRound Won!")
+                    # Add point to player score.
+                    self.add_player_score()
+                    # Display scoreboard.
+                    self.display_scoreboard(user_input, computer_input)
+
+                # Computer round win condition.
+                if self.round_win_condition(computer_input, user_input):
+                    print("\nRound Lost!")
+                    # Add point to computer score.
+                    self.add_computer_score()
+                    # Display scoreboard.
+                    self.display_scoreboard(user_input, computer_input)
+
+                # Round tie condition.
+                if user_input == computer_input:
+                    print("\nTie!")
+                    # Display scoreboard.
+                    self.display_scoreboard(user_input, computer_input)
+
+                # Game win condition.
+                if self.game_win_condition() == True:
+                    # Reset the scores to zero.
+                    self.reset_score()
+                    break
+                else:
+                    continue
+
+            # Requesting user input.
+            self.restart()
+
+            continue
+
     @staticmethod
     def restart():
         """Requesting user input and validating choice."""
