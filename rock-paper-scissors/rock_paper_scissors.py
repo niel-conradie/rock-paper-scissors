@@ -138,8 +138,8 @@ class RockPaperScissors:
     def restart():
         """Requesting user input and validating choice."""
         while True:
-            print("\nRestart?")
-            print("\nYes: Type '1'")
+            print("\nPlay Again?")
+            print("Yes: Type '1'")
             print("No: Type '2'")
 
             try:
