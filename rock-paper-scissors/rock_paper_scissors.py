@@ -24,22 +24,17 @@ class RockPaperScissors:
                 print("\nThat is not a number.")
                 continue
 
+            # User input validation conditions.
             choices = [1, 2, 3]
             if user_input not in choices:
                 print(f"\n{user_input} is not an valid choice!")
                 continue
-            else:
-                return user_input
-
-    @staticmethod
-    def user_input_allocation(user_input):
-        """Assign user input to appropriate game mode."""
-        if user_input == 1:
-            return "rock"
-        elif user_input == 2:
-            return "paper"
-        elif user_input == 3:
-            return "scissors"
+            elif user_input == 1:
+                return "rock"
+            elif user_input == 2:
+                return "paper"
+            elif user_input == 3:
+                return "scissors"
 
     @staticmethod
     def computer_input():
@@ -94,32 +89,30 @@ class RockPaperScissors:
             while True:
                 # Requesting user input.
                 user_input = self.user_input()
-                # Assign user input choice to variable.
-                user_choice = self.user_input_allocation(user_input)
                 # Requesting computer input.
-                computer_choice = self.computer_input()
+                computer_input = self.computer_input()
 
                 # Player round win condition.
-                if self.round_win_condition(user_choice, computer_choice):
+                if self.round_win_condition(user_input, computer_input):
                     print("\nRound Won!")
                     # Add point to player score.
                     self.add_player_score()
                     # Display scoreboard.
-                    self.display_scoreboard(user_choice, computer_choice)
+                    self.display_scoreboard(user_input, computer_input)
 
                 # Computer round win condition.
-                if self.round_win_condition(computer_choice, user_choice):
+                if self.round_win_condition(computer_input, user_input):
                     print("\nRound Lost!")
                     # Add point to computer score.
                     self.add_computer_score()
                     # Display scoreboard.
-                    self.display_scoreboard(user_choice, computer_choice)
+                    self.display_scoreboard(user_input, computer_input)
 
                 # Round tie condition.
-                if user_choice == computer_choice:
+                if user_input == computer_input:
                     print("\nTie!")
                     # Display scoreboard.
-                    self.display_scoreboard(user_choice, computer_choice)
+                    self.display_scoreboard(user_input, computer_input)
 
                 # Game win condition.
                 if self.game_win_condition() == True:
