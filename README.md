@@ -49,6 +49,6 @@ To launch the Rock-Paper-Scissors Game run thus file.
 ----
 ## **License**
 
-[MIT License](https://github.com/niel-conradie/Rock-Paper-Scissors/blob/development/LICENSE)
+[MIT License](https://github.com/niel-conradie/Rock-Paper-Scissors/blob/master/LICENSE)
 
 ----
