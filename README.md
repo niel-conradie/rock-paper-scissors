@@ -47,7 +47,7 @@ To launch the Rock-Paper-Scissors Game run thus file.
   run.py
 ```
 ----
-## **Usage**
+## **License**
 
 [MIT License](https://github.com/niel-conradie/Rock-Paper-Scissors/blob/development/LICENSE)
 
