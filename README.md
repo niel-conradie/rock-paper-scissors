@@ -1,6 +1,6 @@
 # **Rock-Paper-Scissors**
 
-**Rock-Paper-Scissors Game written in [Python](https://www.python.org).**
+**Rock-Paper-Scissors Terminal Game written in [Python](https://www.python.org).**
 
 Rock-Paper-Scissors is a hand game usually played by two people, where players simultaneously form one of three shapes with an outstretched hand. The "rock" beats scissors, the "scissors" beat paper and the "paper" beats rock; if both players throw the same shape, the game is tied.
 
@@ -42,7 +42,7 @@ Rock-Paper-Scissors can be installed via [Pip](https://pypi.org/project/pip/). T
 ----
 ## **Usage**
 
-To launch the Rock-Paper-Scissors Game run thus file.
+To launch the Rock-Paper-Scissors Game use thus file.
 ```bash
   run.py
 ```
