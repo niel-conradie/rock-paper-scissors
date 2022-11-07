@@ -15,8 +15,8 @@ Rock-Paper-Scissors can be installed via [Pip](https://pypi.org/project/pip/). T
 
 * **Clone Repository**
 ```bash
-  $ git clone https://github.com/niel-conradie/Rock-Paper-Scissors.git
-  $ cd Rock-Paper-Scissors
+  $ git clone https://github.com/niel-conradie/rock-paper-scissors.git
+  $ cd rock-paper-scissors
 ```
 ### **Pip Install**
 
