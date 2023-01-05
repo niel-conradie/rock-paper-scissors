@@ -53,15 +53,6 @@ class RockPaperScissors:
         ):
             return True
 
-    def game_win_condition(self):
-        """Return True if player or computer score equals 3."""
-        if self.player_score == 3:
-            print("\nWinner!")
-            return True
-        if self.computer_score == 3:
-            print("\nYou Lost!")
-            return True
-
     def add_player_score(self):
         """Add point to the player score."""
         self.player_score += 1
@@ -110,7 +101,12 @@ class RockPaperScissors:
                     self.display_scoreboard(user_input, computer_input)
 
                 # Game win condition.
-                if self.game_win_condition() == True:
+                if self.player_score == 3:
+                    print("\nWinner!")
+                    self.reset_score()
+                    break
+                elif self.computer_score == 3:
+                    print("\nYou Lost!")
                     self.reset_score()
                     break
                 else:
