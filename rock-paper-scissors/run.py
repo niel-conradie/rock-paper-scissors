@@ -1,8 +1,7 @@
 from rock_paper_scissors import RockPaperScissors
 
 
-def run():
-    """Rock, Paper, Scissors."""
+if __name__ == "__main__":
     run = RockPaperScissors()
 
     try:
@@ -11,7 +10,3 @@ def run():
     except KeyboardInterrupt:
         # Stopping the game.
         quit("\n\nProgram Terminated")
-
-
-if __name__ == "__main__":
-    run()
