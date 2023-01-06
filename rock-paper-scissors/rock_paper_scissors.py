@@ -76,42 +76,40 @@ class RockPaperScissors:
 
     def start_game(self):
         """Starting the rock-paper-scissors game."""
+        print("\nFirst to '3' wins!")
         while True:
-            print("\nFirst to '3' wins!")
+            # Requesting user input.
+            user_input = self.user_input()
+            # Requesting computer input.
+            computer_input = self.computer_input()
 
-            while True:
-                # Requesting user input.
-                user_input = self.user_input()
-                # Requesting computer input.
-                computer_input = self.computer_input()
+            # Player round win condition.
+            if self.round_win_condition(user_input, computer_input):
+                print("\nRound Won!")
+                self.add_player_score()
+                self.display_scoreboard(user_input, computer_input)
+            # Computer round win condition.
+            elif self.round_win_condition(computer_input, user_input):
+                print("\nRound Lost!")
+                self.add_computer_score()
+                self.display_scoreboard(user_input, computer_input)
+            # Round tie condition.
+            elif user_input == computer_input:
+                print("\nTie!")
+                self.display_scoreboard(user_input, computer_input)
 
-                # Player round win condition.
-                if self.round_win_condition(user_input, computer_input):
-                    print("\nRound Won!")
-                    self.add_player_score()
-                    self.display_scoreboard(user_input, computer_input)
-                # Computer round win condition.
-                elif self.round_win_condition(computer_input, user_input):
-                    print("\nRound Lost!")
-                    self.add_computer_score()
-                    self.display_scoreboard(user_input, computer_input)
-                # Round tie condition.
-                elif user_input == computer_input:
-                    print("\nTie!")
-                    self.display_scoreboard(user_input, computer_input)
-
-                # Player game win condition.
-                if self.player_score == 3:
-                    print("\nWinner!")
-                    self.reset_score()
-                    self.restart()
-                # Computer game win condition.
-                elif self.computer_score == 3:
-                    print("\nYou Lost!")
-                    self.reset_score()
-                    self.restart()
-                else:
-                    continue
+            # Player game win condition.
+            if self.player_score == 3:
+                print("\nWinner!")
+                self.reset_score()
+                self.restart()
+            # Computer game win condition.
+            elif self.computer_score == 3:
+                print("\nYou Lost!")
+                self.reset_score()
+                self.restart()
+            else:
+                continue
 
     @staticmethod
     def restart():
