@@ -13,11 +13,13 @@ class RockPaperScissors:
     def user_input():
         """Requesting user input and validating choice."""
         while True:
+            # Display user input options.
             print("\nRock, Paper, Scissors!")
             print("\nRock: Type '1'")
             print("Paper: Type '2'")
             print("Scissors: Type '3'")
 
+            # Requesting user input.
             try:
                 user_input = int(input("\nEnter: "))
             except ValueError:
@@ -120,10 +122,12 @@ class RockPaperScissors:
     def restart():
         """Requesting user input and validating choice."""
         while True:
+            # Display user input options.
             print("\nPlay Again?")
             print("\nYes: Type '1'")
             print("No: Type '2'")
 
+            # Requesting user input.
             try:
                 user_input = int(input("\nEnter: "))
             except ValueError:
