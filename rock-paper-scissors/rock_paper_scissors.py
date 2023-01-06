@@ -88,23 +88,22 @@ class RockPaperScissors:
                     print("\nRound Won!")
                     self.add_player_score()
                     self.display_scoreboard(user_input, computer_input)
-
                 # Computer round win condition.
-                if self.round_win_condition(computer_input, user_input):
+                elif self.round_win_condition(computer_input, user_input):
                     print("\nRound Lost!")
                     self.add_computer_score()
                     self.display_scoreboard(user_input, computer_input)
-
                 # Round tie condition.
-                if user_input == computer_input:
+                elif user_input == computer_input:
                     print("\nTie!")
                     self.display_scoreboard(user_input, computer_input)
 
-                # Game win condition.
+                # Player game win condition.
                 if self.player_score == 3:
                     print("\nWinner!")
                     self.reset_score()
                     break
+                # Computer game win condition.
                 elif self.computer_score == 3:
                     print("\nYou Lost!")
                     self.reset_score()
