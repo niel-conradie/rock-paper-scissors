@@ -104,19 +104,14 @@ class RockPaperScissors:
                 if self.player_score == 3:
                     print("\nWinner!")
                     self.reset_score()
-                    break
+                    self.restart()
                 # Computer game win condition.
                 elif self.computer_score == 3:
                     print("\nYou Lost!")
                     self.reset_score()
-                    break
+                    self.restart()
                 else:
                     continue
-
-            # Requesting user input.
-            self.restart()
-
-            continue
 
     @staticmethod
     def restart():
